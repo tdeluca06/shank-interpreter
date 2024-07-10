@@ -10,12 +10,11 @@ public class Token {
         IF, WHILE, VARIABLES, LPAREN, RPAREN, GREATERTHANEQUALTO, SUBSTRING, CHARACTER,
         REPEAT, ELSE, LBRACKET, RBRACKET, ELSIF, ASSIGNMENTEQUAL, READ, THEN,
         NOTEQUAL, INDENT, DEDENT, START, END, LEFT, RIGHT, WRITE, TRUE, FALSE, ENDOFLINE }
-
-    public Token() {
-
+    // Accessor
+    public Token(TokenType type) {
+        this.type = type;
     }
 
-    // Accessor
     public Token(TokenType type, String value) {
         this.type = type;
         this.value = value;

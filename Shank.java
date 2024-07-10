@@ -27,7 +27,7 @@ public class Shank {
         List <String> lines = Files.readAllLines(fPath);
 
         Lexer lexData = new Lexer();
-        lines.forEach(line -> {
+        lines.forEach(line -> { // iterate over each line
             try {
                 lexData.lex(line);
             }
@@ -35,6 +35,7 @@ public class Shank {
                 e.printStackTrace();
             }
         });
-
+        System.out.println("Lex result: \n");
+        lexData.printTokens();
     }
 }
